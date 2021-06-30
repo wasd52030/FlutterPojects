@@ -1,0 +1,28 @@
+name: exchange_rate_converter
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  dio: ^4.0.0
+  cupertino_icons: ^1.0.2
+  sprintf: ^4.0.0
+  flutter_launcher_icons: ^0.7.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter_icons:
+  image_path: "assets/icons/ic_launcher.png"
+  android: true
+  ios: true 
+
+flutter:
+  uses-material-design: true
