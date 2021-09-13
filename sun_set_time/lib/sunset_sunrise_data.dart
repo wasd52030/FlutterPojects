@@ -1,4 +1,4 @@
-class SunsetSunriseData{
+class SunsetSunriseData {
   String sunrise;
   String sunset;
 

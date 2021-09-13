@@ -26,12 +26,11 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
-  Future<String> getTimeString() async{
-    var data=await ApiRepsone().getData();
-    var timestring=data['results']['sunset'];
-    var x=DateTime.parse(timestring).toLocal();
-    return "${x.hour}:${x.minute}";
+  Future<String> getTimeString() async {
+    var data = await ApiRepsone().getData();
+    var timestring = data['results']['sunset'];
+    var x = DateTime.parse(timestring).toLocal();
+    return (x.minute) > 10 ? "${x.hour}:${x.minute}" : "${x.hour}:0${x.minute}";
   }
 
   @override
@@ -40,19 +39,13 @@ class _HomePageState extends State<HomePage> {
       body: Center(
         child: FutureBuilder<String>(
           future: getTimeString(),
-          builder: (context,snapshot){
-            if(snapshot.hasData)
-            {
+          builder: (context, snapshot) {
+            if (snapshot.hasData) {
+              print(snapshot.data);
               return ResultView(snapshot.data);
-            }
-            else if(snapshot.hasError)
-            {
-              return ErrorView(
-                onRefshButtonClick:()=>setState((){})
-              );
-            }
-            else
-            {
+            } else if (snapshot.hasError) {
+              return ErrorView(onRefshButtonClick: () => setState(() {}));
+            } else {
               return LoadgingView();
             }
           },
@@ -61,5 +54,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-
-

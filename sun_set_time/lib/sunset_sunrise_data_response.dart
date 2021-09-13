@@ -1,6 +1,6 @@
 import 'sunset_sunrise_data.dart';
 
-class SunsetSunriseDataResponse{
+class SunsetSunriseDataResponse {
   SunsetSunriseData results;
   String status;
 
