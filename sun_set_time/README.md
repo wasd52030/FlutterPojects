@@ -1,16 +1,6 @@
-# sun_set_time
+# sunset_time
 
-A new Flutter project.
+從 https://api.sunrise-sunset.org/json?lat=22.6487354&lng=120.3287544&date=today&formatted=0 中把資料取下來，經過一陣操作後，把想要的資訊(以本app來說是日落時間)顯示在上面。
 
-## Getting Started
+這app是某次google活動寫的，由於活動當下電腦出了點問題，會後把還沒完成的部分完成。
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
