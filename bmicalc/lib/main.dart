@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: MyHomePage(title: 'Flutter BMI Calc Demo'),
+      home: MyHomePage(title: 'Flutter BMI Calc'),
       debugShowCheckedModeBanner: false,  // 去除右上方Debug標誌
     );
   }
