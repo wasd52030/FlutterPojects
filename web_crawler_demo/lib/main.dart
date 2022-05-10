@@ -123,6 +123,7 @@ class _MainpageState extends State<Mainpage> {
   Future<List<News>> getNews(pages) async{
     final dio=new Dio();
 
+    //網址過時，GGla
     final res=await dio.post(
       'https://tsvs.tc.edu.tw/app/index.php?Action=mobilercglist',
       data: FormData.fromMap({
